@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+      - triton
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017
+      - TRITON_URL=triton:8001
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  triton:
+    image: nvcr.io/nvidia/tritonserver:23.10-py3
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./app/triton:/models
+    command: ["tritonserver", "--model-repository=/models"]
+
+volumes:
+  mongodb_data:

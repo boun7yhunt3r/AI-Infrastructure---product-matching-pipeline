@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "1",
+    "name": "Nike Air Max Running Shoes",
+    "category": "Footwear",
+    "price": 129.99,
+    "description": "Comfortable running shoes with air cushioning",
+    "embedding": [0.12, -0.45, 0.78, ...]  // 512-dim vector
+  },
+  {
+    "_id": "2",
+    "name": "Adidas Trefoil T-Shirt",
+    "category": "Apparel",
+    "price": 29.99,
+    "description": "Classic cotton t-shirt with Adidas logo",
+    "embedding": [-0.23, 0.56, -0.12, ...]  // 512-dim vector
+  },
+  {
+    "_id": "3",
+    "name": "Apple iPhone 13 Pro",
+    "category": "Electronics",
+    "price": 999.00,
+    "description": "Latest iPhone with A15 Bionic chip",
+    "embedding": [0.45, 0.67, -0.89, ...]  // 512-dim vector
+  }
+]
