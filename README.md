@@ -12,6 +12,10 @@ A scalable system for matching product images against a database using visual an
 ## ✨ Data Initialization
 <img width="4155" height="1405" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/32408af1-18a9-4efb-bc91-6d6ec632bb30" />
 
+## ✨ Query
+<img width="5555" height="605" alt="Untitled Diagram drawio (2)" src="https://github.com/user-attachments/assets/d6b1de58-f448-43cb-980f-8fb538123f67" />
+
+
 ---
 
 ## ✨ Features
@@ -46,8 +50,49 @@ The system consists of three main components:
 
 ### 📦 Installation
 
-Clone the repository:
+Build and start the services:
 
-```bash
-git clone https://github.com/your-username/product-matching-pipeline.git
-cd product-matching-pipeline
+bash
+docker-compose up --build
+
+Initialize the MongoDB with sample product data:
+Data/
+
+📡 API Documentation
+🔍 POST /match-product
+Match an input image against stored products.
+
+Input: JPEG or PNG image
+
+Output: Best matching product with similarity score
+
+🧪 Example Request
+curl -X POST -F "test_shoe.jpg" http://localhost:8000/match-product
+
+✅ Example Response
+json
+Copy
+Edit
+{
+  "status": "success",
+  "result": {
+    "match": {
+      "_id": "1",
+      "name": "Nike Air Max Running Shoes",
+      "category": "Footwear",
+      "price": 129.99,
+      "description": "Comfortable running shoes with air cushioning"
+    },
+    "distance": 0.15
+  }
+}
+
+🧪 GET /health
+Check if the API service is alive.
+
+⚙️ Configuration
+Environment variables are managed in the .env file:
+
+env
+MONGODB_URI=mongodb://mongodb:27017
+TRITON_URL=triton:8001
