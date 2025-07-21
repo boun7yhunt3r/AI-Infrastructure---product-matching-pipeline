@@ -10,7 +10,7 @@ A scalable system for matching product images against a database using visual an
 <img width="3705" height="3705" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/37db5e1d-c4c1-4fd8-89f6-20a1dbe6e9aa" />
 
 ## ✨ Data Initialization
-<img width="3855" height="1105" alt="flow drawio" src="https://github.com/user-attachments/assets/a1479d54-6ec9-4bda-b0aa-f9bcdcc33567" />
+<img width="4155" height="1405" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/32408af1-18a9-4efb-bc91-6d6ec632bb30" />
 
 ---
 
