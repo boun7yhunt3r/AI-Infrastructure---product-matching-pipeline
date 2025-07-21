@@ -6,8 +6,10 @@ a product matching pipeline where an input image is compared against  stored pro
 
 A scalable system for matching product images against a database using visual and textual embeddings, powered by OpenAI's CLIP model. This pipeline integrates FAISS for similarity search, MongoDB for metadata storage, and NVIDIA Triton Inference Server for fast model serving — all wrapped with FastAPI and Docker for easy deployment.
 
-![Architecture]
+## [Architecture]
+<img width="3705" height="3705" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/37db5e1d-c4c1-4fd8-89f6-20a1dbe6e9aa" />
 
+## ✨ Data Initialization
 <img width="3855" height="1105" alt="flow drawio" src="https://github.com/user-attachments/assets/a1479d54-6ec9-4bda-b0aa-f9bcdcc33567" />
 
 ---
